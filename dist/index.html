@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <nav class="bg-gray-400">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+
+                        </button>
+                    </div>
+                    <div class="inline-flex flex-row ml-auto sm:items-stretch sm:justify-start">
+
+                        <div class="inline-flex flex-row hidden sm:block sm:ml-6 rounded">
+                            <div class="flex space-x-8">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="#" class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
+                                    text-sm font-medium" aria-current="page">Home</a>
+
+                                <a href="#"
+                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium">About</a>
+
+                                <a href="#"
+                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+
+                                <a href="#"
+                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                        <div class="ml-3 relative">
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">Home</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex flex-wrap justify-center">
+            <img src="../assets/images/kkp_1.png" alt="" class="w-full h-screen align-middle object-fill">
+        </div>
+    </div>
+</body>
+
+</html>
