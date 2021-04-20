@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <title>Landing Page</title>
 </head>
 
-<body>
+<body class="overflow-hidden">
     <div class="container">
         <!-- This example requires Tailwind CSS v2.0+ -->
         <nav class="bg-gray-400">
@@ -24,15 +25,15 @@
 
                         </button>
                     </div>
-                    <div class="inline-flex flex-row ml-auto sm:items-stretch sm:justify-start">
+                    <div class="inline-flex flex-row ml-auto sm:items-stretch sm:justify-start bg-gray-100 rounded">
 
-                        <div class="inline-flex flex-row hidden sm:block sm:ml-6 rounded">
+                        <div class="inline-flex flex-row hidden sm:block sm:ml-6 rounded" x-data="{ tab: 'sli-1' }">
                             <div class="flex space-x-8">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="#" class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
-                                    text-sm font-medium" aria-current="page">Home</a>
+                                <a href="index.html" class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
+                                    text-sm font-medium" aria-current="page" @click="tab = 'sli-1'">Home</a>
 
-                                <a href="#"
+                                <a href="about.html"
                                     class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium">About</a>
 
                                 <a href="#"
@@ -60,10 +61,10 @@
             <div class="sm:hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    <a href="index.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">Home</a>
 
-                    <a href="#"
+                    <a href="about.html"
                         class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
 
                     <a href="#"
@@ -74,9 +75,15 @@
                 </div>
             </div>
         </nav>
-        <div class="flex flex-wrap justify-center">
-            <img src="../assets/images/kkp_1.png" alt="" class="w-full h-screen align-middle object-fill">
+        <div class="flex flex-wrap justify-left static">
+            <img src="../assets/images/kkp_1.png" alt="" class="w-full h-screen align-middle object-fill" />
+            <img src="../assets/images/logo_1.png" alt="" class="absolute" />
+            <div class="flex flex-end justify-end static">
+                <img src="../assets/images/SIPEKERJA.png" alt="" class="absolute p-48" />
+                <img src="../assets/images/sistem.png" alt="" class="absolute p-60 ml-6" />
+            </div>
         </div>
+
     </div>
 </body>
 
