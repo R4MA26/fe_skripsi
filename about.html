@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .carousel-open:checked+.carousel-item {
+            position: static;
+            opacity: 100;
+        }
+
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
+            display: block;
+        }
+
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #ffb317;
+            /*Set to match the Tailwind colour you want the active one to be */
+        }
+
+        body {
+            background-color: rgb(245, 238, 238);
+        }
+    </style>
+    <title>About</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <nav class="bg-gray-400">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <div class="relative flex items-center justify-between h-16">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <!-- <span class="sr-only">Open main menu</span> -->
+
+                        </button>
+                    </div>
+                    <div class="inline-flex flex-row ml-auto sm:items-stretch sm:justify-start bg-gray-100 rounded">
+
+                        <div class="inline-flex flex-row hidden sm:block sm:ml-6 rounded">
+                            <div class="flex space-x-8">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="index.html" class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
+                                    text-sm font-medium" aria-current="page">Home</a>
+
+                                <a href="#"
+                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium">About</a>
+
+                                <a href="#"
+                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+
+                                <a href="#"
+                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                        <div class="ml-3 relative">
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="index.html" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">Home</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Login</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex flex-wrap justify-center static p-8">
+            <div class="carousel relative shadow-2xl bg-white">
+                <div class="carousel-inner relative overflow-hidden ">
+                    <!--Slide 1-->
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+                        hidden="" checked="checked">
+                    <div class="carousel-item absolute opacity-0" style="height:75vh;">
+                        <div class="block h-full w-full text-white text-5xl text-center">
+                            <img src="../assets/images/kkp_1.png" alt=""
+                                class="w-full h-screen align-middle object-fill" />
+
+                        </div>
+                    </div>
+                    <label for="carousel-3"
+                        class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                    <label for="carousel-2"
+                        class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                    <!--Slide 2-->
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                        hidden="">
+                    <div class="carousel-item absolute opacity-0" style="height:75vh;">
+                        <div class="block h-full w-full bg-yellow-500 text-white text-5xl text-center">
+                            <img src="../assets/images/kkp_1.png" alt=""
+                                class="w-full h-screen align-middle object-fill" />
+                        </div>
+                    </div>
+                    <label for="carousel-1"
+                        class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                    <label for="carousel-3"
+                        class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                    <!--Slide 3-->
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                        hidden="">
+                    <div class="carousel-item absolute opacity-0" style="height:75vh;">
+                        <div class="block h-full w-full bg-yellow-500 text-white text-5xl text-center">
+                            <img src="../assets/images/kkp_1.png" alt=""
+                                class="w-full h-screen align-middle object-fill" />
+                        </div>
+                    </div>
+                    <label for="carousel-2"
+                        class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                    <label for="carousel-1"
+                        class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                    <!-- Add additional indicators for each slide-->
+                    <ol class="carousel-indicators">
+                        <li class="inline-block mr-3">
+                            <label for="carousel-1"
+                                class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                        </li>
+                        <li class="inline-block mr-3">
+                            <label for="carousel-2"
+                                class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                        </li>
+                        <li class="inline-block mr-3">
+                            <label for="carousel-3"
+                                class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-4">
+            <div class="bg-white rounded shadow-lg p-6 m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-red-500 rounded">
+                        TUGAS DAN FUNGSI BIRO PERANCANGAN
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="static">
+            <img src="../assets/images/to-do-list 1.png" alt="" class="absolute ml-32 h-16">
+            <div class=" w-full flex items-center justify-left bg-teal-lightest font-sans">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-red-500 rounded ml-48 mt-4">
+                        TUGAS
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-yellow-500 text-center px-4 py-2 bg-gray rounded text-3xl">
+                01
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-yellow-500 rounded">
+                        Kordinasi penyusunan perencanaan kebijakan umum,program dan anggaran dan pengelolaan kinerja
+                        oraganisasi
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-green-500 text-center px-4 py-2 bg-gray rounded text-3xl">
+                02
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-green-500 rounded">
+                        Kerja sama antarlembaga di bidang kelautan dan perikanan
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="static">
+            <img src="../assets/images/teamwork _1.png" alt="" class="absolute ml-32 h-16">
+            <div class=" w-full flex items-center justify-left bg-teal-lightest font-sans">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-red-500 rounded ml-52 mt-4">
+                        FUNGSI
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-yellow-500 text-center px-4 py-2 bg-gray rounded text-3xl">
+                01
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-yellow-500 rounded">
+                        Penyiapan koordinasi, penyusunan, dan penyerasian perencanaan kebijakan umum dan strategis serta
+                        perencanaan kawasan terpadu di bidang kelautan dan perikanan
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-green-500 text-center px-4 py-2 bg-gray rounded text-3xl">
+                02
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-green-500 rounded">
+                        Penyiapan koordinasi, penyusunan, dan penyerasian rencana kerja dan Anggaran Pendapatan dan
+                        Belanja Negara (APBN), serta analisis, formulasi, perencanaan pinjaman dan hibah luar negeri,
+                        dan
+                        dana transfer di bidang kelautan dan perikanan
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-blue-500 text-center px-4 py-2 bg-gray rounded text-3xl">
+                03
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-blue-500 rounded">
+                        Penyiapan koordinasi, penyusunan, dan penyerasian perencanaan, pengukuran, monitoring, evaluasi,
+                        dan pelaporan kinerja organisasi, serta bahan pimpinan
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-pink-500 text-center px-4 py-2 bg-gray rounded text-3xl">
+                04
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-pink-500 rounded">
+                        Penyiapan koordinasi, fasilitasi, penyusunan, analisis, penyerasian, perumusan, pelaksanaan,
+                        monitoring, dan evaluasi kerja sama di bidang kelautan dan perikanan dengan kementerian/
+                        lembaga,
+                        pemerintah daerah, dan lembaga non pemerintah
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class=" w-full flex items-center justify-center bg-teal-lightest font-sans p-2">
+            <h1 class="text-green-400 text-center px-4 py-2 bg-gray rounded text-3xl">
+                05
+            </h1>
+            <div class="p- m-4 w-full lg:w-1/2  sm:w-1/2">
+                <div class="">
+                    <h1 class="text-white text-center px-4 py-2 bg-green-400 rounded">
+                        Pelaksanaan urusan tata usaha dan rumah tangga biro.
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer bg-white relative border-grey-700">
+            <div class="container mx-auto px-6">
+                <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+                    <div class="sm:w-2/3 text-center py-6">
+                        <p class="text-sm text-black font-bold mb-2">
+                            © Copyright Biro Perencanaan KKP
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
