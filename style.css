@@ -11484,6 +11484,12 @@ video {
 .h-screen {
   height: 80vh;
 }
+.h-screen-1 {
+  height: 71vh;
+}
+.h-screen-2 {
+  height: 100vh;
+}
 
 .text-xs {
   font-size: 0.75rem;
