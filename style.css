@@ -11482,7 +11482,7 @@ video {
 }
 
 .h-screen {
-  height: 100vh;
+  height: 80vh;
 }
 
 .text-xs {
@@ -13088,6 +13088,9 @@ video {
   margin-top: 24rem;
 }
 
+.mt-100 {
+  margin-top: 33rem;
+}
 .mr-96 {
   margin-right: 24rem;
 }
