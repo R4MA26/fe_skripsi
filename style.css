@@ -11482,13 +11482,13 @@ video {
 }
 
 .h-screen {
-  height: 80vh;
+  height: 100vh;
 }
 .h-screen-1 {
   height: 71vh;
 }
 .h-screen-2 {
-  height: 100vh;
+  height: 80vh;
 }
 .h-screen-3 {
   height: 70vh;
