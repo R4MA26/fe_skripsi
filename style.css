@@ -11490,6 +11490,9 @@ video {
 .h-screen-2 {
   height: 100vh;
 }
+.h-screen-3 {
+  height: 70vh;
+}
 
 .text-xs {
   font-size: 0.75rem;
@@ -13097,6 +13100,7 @@ video {
 .mt-100 {
   margin-top: 33rem;
 }
+
 .mr-96 {
   margin-right: 24rem;
 }
@@ -104996,6 +105000,9 @@ video {
   .lg\:h-screen {
     height: 100vh;
   }
+  .lg\:h-screen-3 {
+    height: 78vh;
+  }
 
   .lg\:text-xs {
     font-size: 0.75rem;
@@ -106598,6 +106605,9 @@ video {
 
   .lg\:mt-96 {
     margin-top: 24rem;
+  }
+  .lg\:mt-98 {
+    margin-top: 29rem;
   }
 
   .lg\:mr-96 {

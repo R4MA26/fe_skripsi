@@ -14,7 +14,7 @@
     <title>Login</title>
 </head>
 
-<body class="bg-gray-300 h-screen-1">
+<body class="bg-gray-300 h-screen-1 overflow-hidden">
     <div class="">
         <!-- navbar -->
         <nav class="bg-gray-300">
@@ -85,32 +85,33 @@
             </div>
         </nav>
         <div class="flex flex-wrap justify-left">
-            <img src="assets/images/bg.png" alt="" class="w-7/12 h-screen-1 align-middle object-fill p-14" />
+            <img src="assets/images/bg.png" alt="" class="w-7/12 h-screen-3 align-middle object-fill p-14" />
 
-            <div class="sm:w-1/4 p-2 md:w-1/2 lg:w-3/12 xl:w-1/4 ml-16">
+            <div class="sm:w-1/4 p-2 md:w-1/2 lg:w-3/12 xl:w-1/4 ml-20">
                 <div class="bg-gray-400 px-6 py-8 rounded-lg shadow-lg text-center lg:h-full">
-                    <div class="mb-4">
+                    <div class="">
                         <img class="w-auto mx-auto py-3 px-4" src="assets/images/logo_1.png" alt="" />
                     </div>
                     <img class="w-auto mx-auto py-3 px-4 mr-16 absolute mt-4" src="assets/images/user_1.png" alt="" />
-                    <img class="w-auto mx-auto py-3 px-4 mr-16 absolute mt-16" src="assets/images/lock_1.png" alt="" />
-                    <form class="bg-gray-400 px-8 pt-6 pb-8 mb-4 ">
-                        <div class="mb-4 flex flex-wrap justify-content-start">
+                    <img class="w-auto mx-auto py-3 px-4 mr-16 absolute mt-20" src="assets/images/lock_1.png" alt="" />
+                    <form class="bg-gray-400 px-8 pt-6 pb-8  ">
+                        <div class=" flex flex-wrap justify-content-start">
                             <!-- <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                                 Username
                             </label> -->
 
-                            <input class="bg-blue-300 shadow appearance-none border rounded-lg w-10/12 py-2 px-2 ml-8
-                                text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username"
+                            <input class="bg-blue-300 shadow appearance-none border rounded-lg w-10/12 py-2 px-2 ml-auto
+                                text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-7" id="username"
                                 type="text" placeholder="Username">
+                            <input class="bg-blue-300 shadow appearance-none border rounded-lg w-10/12 py-2 px-2 ml-auto
+                                text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password"
+                                type="password" placeholder="Password">
                         </div>
                         <div class="mb-6">
                             <!-- <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
                                 Password
                             </label> -->
-                            <input class="bg-blue-300 shadow appearance-none border rounded-lg w-10/12 py-2 px-3 ml-5
-                                text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password"
-                                type="password" placeholder="Password">
+
                             <!-- <p class="text-red-500 text-xs italic">Please choose a password.</p> -->
                         </div>
                         <div class="flex items-center justify-center">
@@ -129,7 +130,7 @@
         </div>
 
 
-        <footer class="footer bg-white relative border-grey-700">
+        <footer class="footer bg-white relative border-grey-700 h-screen">
             <div class="container mx-auto px-6">
                 <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
                     <div class="sm:w-2/3 text-center py-6">
