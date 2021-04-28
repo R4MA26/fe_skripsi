@@ -120608,6 +120608,9 @@ video {
   .lg\:w-screen {
     width: 100vw;
   }
+  .lg\:w-screen-1 {
+    width: 64vw;
+  }
 
   .lg\:w-min {
     width: -webkit-min-content;
