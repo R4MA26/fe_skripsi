@@ -11493,6 +11493,9 @@ video {
 .h-screen-3 {
   height: 71vh;
 }
+.h-screen-4 {
+  height: 87vh;
+}
 
 .text-xs {
   font-size: 0.75rem;
@@ -27102,6 +27105,9 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+.w-screen-1 {
+  width: 50vw;
 }
 
 .w-min {
