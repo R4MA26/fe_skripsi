@@ -75510,8 +75510,8 @@ video {
     margin-bottom: 24rem;
   }
 
-  .md\:ml-96 {
-    margin-left: 24rem;
+  .md\:ml-97 {
+    margin-left: 33rem;
   }
 
   .md\:mt-auto {
@@ -89490,6 +89490,9 @@ video {
 
   .md\:w-screen {
     width: 100vw;
+  }
+  .md\:w-screen-1 {
+    width: 80vw;
   }
 
   .md\:w-min {
@@ -106629,6 +106632,9 @@ video {
 
   .lg\:ml-96 {
     margin-left: 24rem;
+  }
+  .lg\:ml-97 {
+    margin-left: 40rem;
   }
 
   .lg\:mt-auto {
