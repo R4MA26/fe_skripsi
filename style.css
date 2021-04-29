@@ -11484,6 +11484,10 @@ video {
 .h-screen {
   height: 100vh;
 }
+
+.h-screen-0 {
+  height: 70vh;
+}
 .h-screen-1 {
   height: 71vh;
 }
@@ -26972,6 +26976,9 @@ video {
 
 .w-96 {
   width: 24rem;
+}
+.w-97 {
+  width: 30rem;
 }
 
 .w-auto {
