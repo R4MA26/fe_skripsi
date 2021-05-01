@@ -13,26 +13,27 @@
 <body class="overflow-hidden">
     <div class="">
         <!-- navbar -->
-        <nav class="bg-gray-400">
-            <div class="max-w-7xl mx-auto px-2 sm:px-6">
+        <nav class="bg-gray-300">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 xl\:w-screen">
                 <div class="relative flex items-center justify-between h-16">
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         <!-- Mobile menu button-->
                         <button type="button"
                             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                             aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="sr-only">Open main menu</span>
+                            <!-- <span class="sr-only">Open main menu</span> -->
 
                         </button>
                     </div>
-                    <!-- web menu -->
-                    <div class="inline-flex flex-row ml-auto sm:items-stretch sm:justify-start bg-gray-100 rounded">
 
-                        <div class="inline-flex flex-row hidden sm:block sm:ml-6 rounded" x-data="{ tab: 'sli-1' }">
+                    <div
+                        class="inline-flex flex-row ml-97 sm:items-stretch sm:justify-start bg-gray-100 rounded lg:h-full p-2">
+
+                        <div class="inline-flex flex-row hidden sm:block sm:ml-6 rounded">
                             <div class="flex space-x-8">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="index.html" class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
-                                    text-sm font-medium" aria-current="page" @click="tab = 'sli-1'">Home</a>
+                                <a href="index.html" class="bg-blue-500 text-white hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
+                                    text-sm font-medium" aria-current="page">Home</a>
 
                                 <a href="about.html"
                                     class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium">About</a>
@@ -40,8 +41,8 @@
                                 <a href="contact.html"
                                     class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
 
-                                <a href="login.html"
-                                    class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                                <a href="login.html" class="text-blue-300 hover:bg-blue-100 hover:text-blue-300 px-3 py-2 rounded-md
+                                    text-sm font-medium">Login</a>
                             </div>
                         </div>
                     </div>
